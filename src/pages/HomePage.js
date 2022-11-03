@@ -10,7 +10,7 @@ const HomePage = () => {
       </p>
       <p>
         Checkout my Github repo for source code{" "}
-        <a href="https://github.com/vanessabau">here</a>
+        <a href="https://github.com/vanessabau/make-modals">here</a>
       </p>
     </div>
   );

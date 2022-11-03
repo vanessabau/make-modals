@@ -29,6 +29,10 @@ const ReactModalNoAf = () => {
         Inspiration Code
       </a>
       <br />
+      <a href="https://github.com/vanessabau/make-modals/blob/master/src/components/react-modal-ts-no-af/react-modal-ts-noaf.js">
+        Actual Code (Github)
+      </a>
+      <br />
     </>
   );
 };
