@@ -1,0 +1,113 @@
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+  /*   line-height: 1.5; */
+  /*   letter-spacing: 0.12em; */
+  /*   word-spacing: 0.16em; */
+}
+
+:focus {
+  outline: .25em dashed rgba(0, 255, 0, 1);
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-top: .25em;
+}
+
+dl {
+  margin: .25em 0 1em 1.5em;
+}
+
+/* Dialog */
+
+#Overlay {
+  position: absolute;
+  z-index: 150;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.75);
+  display: none;
+  backdrop-filter: blur(.1em); /* Maybe no */
+}
+
+[role="dialog"] {
+  position: absolute;
+  z-index: 200;
+  top: 10vh;
+  bottom: 10vh;
+  left: 10vw;
+  right: 10vw;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  box-shadow: 0 0 2em rgba(0,0,0,.5);
+  background: #fefefe;
+  padding: 0;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [role="dialog"] {
+    transition: transform .1s ease-in, opacity .2s ease-in;
+  }  
+}
+
+[role="dialog"][hidden] {
+  display: block;
+  visibility: hidden;
+  transform: scale(.5);
+  opacity: .6;
+}
+
+[role="dialog"] h2 {
+  margin: .2em;
+  padding: .5rem 1.25rem;
+  background: #333;
+  color: #fefefe;
+}
+
+[role="dialog"] button {
+  float: right;
+  margin: -2.5rem 1.25rem 0 0;
+  padding: 0;
+  text-indent: 5em;
+  line-height: 0;
+  font: inherit;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0a50 50 0 1 0 0 100A50 50 0 0 0 50 0zm26.6 76.6a37.5 37.5 0 0 1-53.2 0 37.5 37.5 0 0 1 0-53.2 37.5 37.5 0 0 1 53.2 0 37.5 37.5 0 0 1 0 53.2zm-7.3-45.9a6.6 6.6 0 0 0-9.3 0l-10 10-10-10a6.6 6.6 0 0 0-9.3 9.3l10 10-10 10a6.6 6.6 0 1 0 9.3 9.3l10-10 10 10a6.6 6.6 0 0 0 9.3 0 6.6 6.6 0 0 0 0-9.3l-10-10 10-10a6.6 6.6 0 0 0 0-9.3z' fill='%23fff'/%3E%3C/svg%3E");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+[role="dialog"] button:focus, [role="dialog"] button:hover {
+/*   outline: .2em solid transparent; */
+  background: #fff;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0a50 50 0 1 0 0 100A50 50 0 0 0 50 0zm26.6 76.6a37.5 37.5 0 0 1-53.2 0 37.5 37.5 0 0 1 0-53.2 37.5 37.5 0 0 1 53.2 0 37.5 37.5 0 0 1 0 53.2zm-7.3-45.9a6.6 6.6 0 0 0-9.3 0l-10 10-10-10a6.6 6.6 0 0 0-9.3 9.3l10 10-10 10a6.6 6.6 0 1 0 9.3 9.3l10-10 10 10a6.6 6.6 0 0 0 9.3 0 6.6 6.6 0 0 0 0-9.3l-10-10 10-10a6.6 6.6 0 0 0 0-9.3z' fill='%23000'/%3E%3C/svg%3E");
+  box-shadow: -.1em -.1em 0 rgba(255,255,255,1), .1em -.1em 0 rgba(255,255,255,1), -.1em .1em 0 rgba(255,255,255,1), .1em .1em 0 rgba(255,255,255,1);
+}
+
+[role="dialog"] div[role=document] {
+  /*  Need this because of a VoiceOver bug  */
+  display: inline;
+}
+
+[role="dialog"] div[role=document] div {
+  box-sizing: border-box;
+  height: calc(100% - 3rem);
+  overflow: auto;
+  padding: .5rem 1.25rem;
+}
