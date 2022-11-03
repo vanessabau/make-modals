@@ -1,0 +1,106 @@
+@import './includes.scss';
+
+.lll-text-primary {
+  color: $colorBlack;
+}
+
+.lll-text-secondary {
+  color: $colorWhite;
+}
+
+.lll-text-left {
+  text-align: left;
+}
+
+.lll-text-center {
+  text-align: center;
+}
+
+.lll-text-right {
+  text-align: right;
+}
+
+.lll-text-strikethrough {
+  color: $colorMediumGrey;
+  text-decoration: line-through;
+}
+
+.lll-text-error {
+  color: $colorError;
+}
+
+.lll-text-warning {
+  color: $colorWarning;
+}
+
+.lll-text-success {
+  color: $colorSuccess;
+}
+
+.lll-text-info {
+  color: $colorInfo;
+}
+
+.lll-link-primary {
+  @include primaryLink;
+}
+
+.lll-link-primary-impact {
+  @include primaryLinkImpact;
+}
+
+.lll-text-xxlarge {
+  @include textXXLarge();
+}
+
+.lll-text-xlarge {
+  @include textXLarge();
+}
+
+.lll-text-large {
+  @include textLarge();
+}
+
+.lll-text-medium {
+  @include textMedium();
+}
+
+.lll-text-small {
+  @include textSmall();
+}
+
+.lll-text-xsmall {
+  @include textXSmall();
+}
+
+.lll-text-body-1 {
+  @include textBody1();
+}
+
+.lll-text-body-2 {
+  @include textBody2();
+}
+
+.lll-text-body-3 {
+  @include textBody3();
+}
+
+.lll-text-button {
+  @include textButton();
+}
+
+.lll-text-subtitle {
+  @include textSubtitle();
+}
+
+.lll-font-weight-regular {
+  font-weight: $fontWeightRegular;
+}
+
+.lll-font-weight-medium {
+  font-weight: $fontWeightMedium;
+}
+
+.lll-font-weight-semibold {
+  font-weight: $fontWeightSemibold;
+}

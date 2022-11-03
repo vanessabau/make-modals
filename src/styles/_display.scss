@@ -1,0 +1,42 @@
+@import './includes.scss';
+
+/* stylelint-disable declaration-no-important, unit-disallowed-list */
+.lll-hidden-visually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.lll-card {
+  background-color: $colorWhite;
+  padding: rem(16);
+}
+
+.lll-separator {
+  background-color: $colorGray75;
+  border-radius: 50%;
+  display: inline-block;
+  height: rem(4);
+  margin: 0 rem(8);
+  vertical-align: middle;
+  width: rem(4);
+}
+
+.lll-line-accent {
+  block-size: fit-content;
+  width: fit-content;
+
+  &::after {
+    background-color: $colorRedLululemon;
+    content: '';
+    display: block;
+    height: rem(4);
+    margin-top: rem(8);
+    position: absolute;
+    width: rem(24);
+  }
+}

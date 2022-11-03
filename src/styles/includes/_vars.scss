@@ -1,0 +1,43 @@
+@import './functions';
+@import './colors';
+
+// Media query variables - major only
+$xsmall: rem(480);
+$small: rem(768);
+$med: rem(992);
+$large: rem(1200);
+$xlarge: rem(1600);
+
+// Grid gutter widths
+$gridGutterSmall: rem(10);
+$gridGutterMedium: rem(15);
+$gridGutterLarge: rem(25);
+$gridMaxWidth: rem(1322);
+$gridMaxOuterWidth: $gridMaxWidth + ($gridGutterLarge * 2) !default;
+
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;
+
+/* stylelint-disable color-no-hex */
+
+// Deprecated colors
+// DO NOT USE IN NEW EXPERIENCES
+$colorRedStrong: #b81c29; // Primary Button hover; Filter Tile hover; not used in consuming apps
+$colorGray75: #bfbfbf; // Button disabled; used in consuming applications
+$colorGray55: #8c8c8c; // Visible focus outline; // used in consuming applications
+$colorGray20: #333; // used in mwa-loyalty only
+$colorNaturalGray: #808080; // used in consuming applications
+$colorGray61Dark: #9b9b9b; // one instance in ecom-web-app
+
+// Deprecated color aliases
+// DO NOT USE IN NEW EXPERIENCES
+$colorJetBlack: $colorBlack; // used in consuming applications
+$colorGray90Dark: $colorBoundaryBoxGrey; // used in consuming applications
+$colorGray30: $colorMediumGrey; // used in consuming applications
+$colorGrayLink: $colorDivideLineGrey; // used in consuming applications
+$colorNaturalBlack: $colorBlack; // used in consuming applications
+$colorSnowWhite: $colorBackgroundLiteGrey; // used in consuming applications
+$colorRedError: $colorError; // used in ecom-checkout-client only
+$colorBlueInfo: $colorInfo; // one instance in ecom-web-app

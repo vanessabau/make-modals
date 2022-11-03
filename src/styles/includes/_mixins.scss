@@ -1,0 +1,109 @@
+// Lobotomized owl selector implementation
+// https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
+//
+// Nest inside of a class selector to apply consistent vertical
+// spacing to direct children of that selector. Useful for laying
+// out blocks of copy.
+@mixin copySpacing($spacing) {
+  > * {
+    margin: 0;
+  }
+
+  > * + * {
+    margin-top: $spacing;
+  }
+}
+
+@mixin copySpacingHorizontal($spacing) {
+  > * {
+    margin: 0;
+  }
+
+  > * + * {
+    margin-left: $spacing;
+  }
+}
+
+// Applies focus styles with focus-visible polyfill
+@mixin focusVisible {
+  &[data-focus-visible-added]:focus {
+    @content;
+  }
+}
+
+// Applies link style changes
+@mixin primaryLinkFallback {
+  color: currentColor;
+  cursor: pointer;
+  padding-bottom: rem(4);
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background-color: $colorDivideLineGrey;
+    bottom: 0;
+    content: '';
+    height: rem(1);
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $colorRedLululemon;
+    }
+  }
+}
+
+@mixin primaryLink {
+  // fallback for older browsers
+  @include primaryLinkFallback;
+
+  @supports (text-underline-offset: 1rem) {
+    // override unnecessary styles from primaryLinkFallback
+    position: static;
+
+    // primaryLink styles
+    text-decoration: underline;
+    text-decoration-color: $colorDivideLineGrey;
+    text-decoration-thickness: rem(1);
+    text-underline-offset: rem(6);
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      border: transparent;
+      text-decoration-color: $colorRedLululemon;
+    }
+  }
+}
+
+@mixin primaryLinkImpact {
+  color: currentColor;
+  padding-bottom: rem(4);
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    background-color: $colorRedLululemon;
+    bottom: 0;
+    content: '';
+    height: rem(2);
+    left: 0;
+    position: absolute;
+    transition: width 0.3s ease-in-out;
+    visibility: hidden;
+    width: 0;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      visibility: visible;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@use 'sass:math';
+
+@import './functions';
+@import './vars';
+
+@mixin textXXLarge() {
+  font-size: rem(56);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: 1;
+
+  @media ($desktop-and-above) {
+    font-size: rem(100);
+    line-height: math.div(92, 100);
+  }
+}
+
+@mixin textXLarge() {
+  font-size: rem(48);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: math.div(52, 48);
+
+  @media ($desktop-and-above) {
+    font-size: rem(72);
+    line-height: 1;
+  }
+}
+
+@mixin textLarge() {
+  font-size: rem(36);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: math.div(44, 36);
+
+  @media ($desktop-and-above) {
+    font-size: rem(57);
+    line-height: math.div(56, 57);
+  }
+}
+
+@mixin textMedium() {
+  font-size: rem(30);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: math.div(32, 30);
+
+  @media ($desktop-and-above) {
+    font-size: rem(40);
+    line-height: math.div(48, 40);
+  }
+}
+
+@mixin textSmall() {
+  font-size: rem(26);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: math.div(28, 26);
+
+  @media ($desktop-and-above) {
+    font-size: rem(30);
+    line-height: math.div(32, 30);
+  }
+}
+
+@mixin textXSmall() {
+  font-size: rem(22);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  line-height: math.div(24, 22);
+
+  @media ($desktop-and-above) {
+    font-size: rem(24);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: math.div(28, 24);
+  }
+}
+
+@mixin textBody1() {
+  font-size: rem(19);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightRegular;
+  line-height: math.div(24, 19);
+}
+
+@mixin textBody2() {
+  font-size: rem(17);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightRegular;
+  line-height: math.div(20, 17);
+}
+
+@mixin textBody3() {
+  font-size: rem(14);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightRegular;
+  line-height: math.div(20, 14);
+}
+
+@mixin textButton() {
+  font-size: rem(16);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $fontWeightSemibold;
+  letter-spacing: rem(1.2);
+  text-transform: uppercase;
+}
+
+@mixin textSubtitle() {
+  @include textBody3();
+
+  font-weight: $fontWeightSemibold;
+  letter-spacing: rem(1.2);
+  text-transform: uppercase;
+}

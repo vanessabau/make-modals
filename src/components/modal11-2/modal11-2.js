@@ -23,7 +23,6 @@ const ModalNew112 = ({
   fullScreen,
   modalTriggerRef = null,
   onClose = {},
-  primaryContentSelector,
 }) => {
   const modalRef = useRef();
 

@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import ReactModalAutoFocus from "./pages/ReactModalAutoFocus";
 import ReactModalNoAf from "./pages/ReactModalNoAf";
 import ReactModalFTrap from "./pages/ReactModalFTrap";
+import PLModalNewPage from "./pages/PLModalNewPage";
 
 function AppRouter() {
   return (
@@ -19,6 +20,7 @@ function AppRouter() {
         />
         <Route path="/React-Modal-No-Af" element={<ReactModalNoAf />} />
         <Route path="/React-Modal-Focus-Trap" element={<ReactModalFTrap />} />
+        <Route path="/PL-Modal-New" element={<PLModalNewPage />} />
       </Routes>
     </BrowserRouter>
   );

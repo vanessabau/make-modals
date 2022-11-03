@@ -1,0 +1,57 @@
+/* stylelint-disable selector-max-type */
+
+@import './includes.scss';
+@import './_animations.scss';
+
+// stylelint-disable-next-line selector-no-qualifying-type
+html.lll-base {
+  background-color: $colorBackgroundLiteGrey;
+  color: $colorBlack;
+}
+
+.lll-base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+
+    // stylelint-disable-next-line selector-no-qualifying-type
+    &.lll-tooltip--open {
+      // Target touch devices
+      @media (hover: none) and (pointer: coarse) {
+        cursor: pointer;
+
+        @include mq($desktop-and-above) {
+          cursor: initial;
+        }
+      }
+    }
+  }
+
+  &,
+  input,
+  textarea,
+  select,
+  button {
+    font-family: 'Calibre', 'Verlag', 'Helvetica', sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  &.js-focus-visible,
+  .js-focus-visible & {
+    :focus:not([data-focus-visible-added]) {
+      outline: none;
+    }
+  }
+}
+
+@import './_grid.scss';
+@import './_text.scss';
+@import './_display.scss';

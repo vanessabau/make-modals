@@ -21,6 +21,9 @@ const Navbar = () => {
         <li>
           <Link to="/React-Modal-Focus-Trap">React Modal Focus Trap</Link>
         </li>
+        <li>
+          <Link to="/PL-Modal-New">Pattern Library Modal New</Link>
+        </li>
       </ul>
     </div>
   );
