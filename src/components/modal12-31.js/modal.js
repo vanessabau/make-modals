@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
+import ReactDOM from "react-dom";
 import FocusTrap from "focus-trap-react";
 
-const ModalWithReactDOM = () => {
+export const ModalWithReactDOM = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -20,4 +20,4 @@ const ModalWithReactDOM = () => {
   );
 };
 
-export default ModalWithReactDOM;
+return showModal ? ReactDOM.createPortal(modal, document.body) : null;
