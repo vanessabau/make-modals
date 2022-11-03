@@ -5,6 +5,7 @@ import Navbar from "./navbar/index";
 import HomePage from "./pages/HomePage";
 import ReactModalAutoFocus from "./pages/ReactModalAutoFocus";
 import ReactModalNoAf from "./pages/ReactModalNoAf";
+import ReactModalFTrap from "./pages/ReactModalFTrap";
 
 function AppRouter() {
   return (
@@ -17,6 +18,7 @@ function AppRouter() {
           element={<ReactModalAutoFocus />}
         />
         <Route path="/React-Modal-No-Af" element={<ReactModalNoAf />} />
+        <Route path="/React-Modal-Focus-Trap" element={<ReactModalFTrap />} />
       </Routes>
     </BrowserRouter>
   );

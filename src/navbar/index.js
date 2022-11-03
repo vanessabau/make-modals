@@ -18,6 +18,9 @@ const Navbar = () => {
         <li>
           <Link to="/React-Modal-No-Af">React Modal No Auto Focus</Link>
         </li>
+        <li>
+          <Link to="/React-Modal-Focus-Trap">React Modal Focus Trap</Link>
+        </li>
       </ul>
     </div>
   );
