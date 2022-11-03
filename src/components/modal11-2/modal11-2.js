@@ -21,7 +21,7 @@ const ModalNew112 = ({
   cancelProps,
   fullScreenMobile,
   fullScreen,
-  modalTriggerRef = null,
+  modalTriggerRef,
   onClose = {},
 }) => {
   const modalRef = useRef();
@@ -178,6 +178,9 @@ ModalNew112.propTypes = {
   fullScreen: PropTypes.bool,
   /**  Flag to enable fullscreen styles on mobile browsers */
   fullScreenMobile: PropTypes.bool,
+  modalTriggerRef: PropTypes.shape({
+    current: PropTypes.object,
+  }),
 };
 
 ModalNew112.defaultProps = {
@@ -192,6 +195,7 @@ ModalNew112.defaultProps = {
   onRequestClose: undefined,
   cancelProps: null,
   visible: false,
+  modalTriggerRef: null,
 };
 
 export default ModalNew112;
