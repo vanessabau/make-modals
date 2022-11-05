@@ -24,25 +24,25 @@ export const ReactModalTs = ({ isShown, hide, modalContent, headerText }) => {
     <>
       <div className="backdrop" onClick={hide} />
       <FocusLock returnFocus>
-        <AutoFocusInside>
-          <div
-            className="wrapper"
-            aria-modal
-            aria-labelledby={headerText}
-            tabIndex={-1}
-            role="dialog"
-          >
-            <div className="styledModal">
-              <div className="header">
-                <div className="headerText">{headerText}</div>
-                <button className="closeButton" onClick={hide}>
-                  XX
-                </button>
-              </div>
-              <div className="content">{modalContent}</div>
+        <div
+          className="wrapper"
+          aria-modal
+          aria-labelledby={headerText}
+          tabIndex={-1}
+          role="dialog"
+        >
+          <div className="styledModal">
+            <div className="header">
+              <div className="headerText">{headerText}</div>
+              <button className="closeButton" onClick={hide}>
+                XX
+              </button>
             </div>
+            <div className="content">{modalContent}</div>
+
+            <button>focus me first</button>
           </div>
-        </AutoFocusInside>
+        </div>
       </FocusLock>
     </>
   );

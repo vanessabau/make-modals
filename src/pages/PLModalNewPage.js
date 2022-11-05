@@ -8,7 +8,7 @@ const PLModalNewPage = () => {
   return (
     <>
       <div>
-        <h1>React Modal with React, FocusLock, and AutoFocus</h1>
+        <h1>React Modal based on Jacob' codepen</h1>
       </div>
       <button
         ref={modalTriggerRef}

@@ -7,7 +7,7 @@ const ReactModalFtrap = () => {
   return (
     <>
       <div>
-        <h1>React Modal with React, FocusLock, and AutoFocus</h1>
+        <h1>React Modal with Focus Trap</h1>
       </div>
       <button onClick={toggle}>Toggle</button>
       <br />
