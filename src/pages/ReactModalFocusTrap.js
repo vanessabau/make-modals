@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactModalFTrap } from "../components/react-modal-ftrap/react-modal-ftrap";
-import { useModal } from "../components/react-modal-ftrap/react-modal-utils";
+import { ReactModalFT } from "../components/react-modal-ft/react-modal-ft";
+import { useModal } from "../components/react-modal-ft/react-modal-utils";
 
-const ReactModalFtrap = () => {
+const ReactModalFocusTrap = () => {
   const { isShown, toggle } = useModal();
   return (
     <>
@@ -11,7 +11,7 @@ const ReactModalFtrap = () => {
       </div>
       <button onClick={toggle}>Toggle</button>
       <br />
-      <ReactModalFTrap
+      <ReactModalFT
         isShown={isShown}
         hide={toggle}
         headerText="Confirmation"
@@ -31,4 +31,4 @@ const ReactModalFtrap = () => {
     </>
   );
 };
-export default ReactModalFtrap;
+export default ReactModalFocusTrap;

@@ -3,7 +3,7 @@ import FocusTrap from "focus-trap-react";
 import ReactDOM from "react-dom";
 import "./react-modal.css";
 
-export const ReactModalFTrap = ({
+export const ReactModalFT = ({
   isShown,
   hide,
   modalContent,

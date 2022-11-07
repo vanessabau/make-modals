@@ -11,8 +11,8 @@ export const ModalWithReactDOM = () => {
 
       <FocusTrap active={showModal}>
         <div id="modal">
-          Modal with <a href="#">with</a> <a href="#">some</a>{" "}
-          <a href="#">focusable</a> elements.
+          Modal with <a href="src/components/old-modals/modal12-31.js/modal#">with</a> <a href="src/components/old-modals/modal12-31.js/modal#">some</a>{" "}
+          <a href="src/components/old-modals/modal12-31.js/modal#">focusable</a> elements.
           <button onClick={() => setShowModal(false)}>hide modal</button>
         </div>
       </FocusTrap>

@@ -13,10 +13,10 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/React-Modal-Auto-Focus">React Modal with Auto Focus</Link>
+          <Link to="/React-Modal-Focus-Lock">React Modal Focus Lock</Link>
         </li>
         <li>
-          <Link to="/React-Modal-No-Af">React Modal No Auto Focus</Link>
+          <Link to="/React-Modal-No-Af">React Modal Focus Lock No AF</Link>
         </li>
         <li>
           <Link to="/React-Modal-Focus-Trap">React Modal Focus Trap</Link>

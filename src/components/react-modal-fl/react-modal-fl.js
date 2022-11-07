@@ -3,7 +3,7 @@ import FocusLock, { AutoFocusInside } from "react-focus-lock";
 import ReactDOM from "react-dom";
 import "./react-modal.css";
 
-export const ReactModalTs = ({ isShown, hide, modalContent, headerText }) => {
+export const ReactModalFL = ({ isShown, hide, modalContent, headerText }) => {
   const onKeyDown = (e) => {
     if (e.keyCode === 27 && isShown) {
       hide();
@@ -27,6 +27,7 @@ export const ReactModalTs = ({ isShown, hide, modalContent, headerText }) => {
         <div
           className="wrapper"
           aria-modal
+          aria-label="modal title"
           aria-labelledby={headerText}
           tabIndex={-1}
           role="dialog"
