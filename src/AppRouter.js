@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/react-modal-ft/navbar/index";
+import Navbar from "./navbar/index";
 
 import HomePage from "./pages/HomePage";
 import ReactModalFocusLock from "./pages/ReactModalFocusLock";
@@ -19,7 +19,10 @@ function AppRouter() {
           element={<ReactModalFocusLock />}
         />
         <Route path="/React-Modal-No-Af" element={<ReactModalNoAf />} />
-        <Route path="/React-Modal-Focus-Trap" element={<ReactModalFocusTrap/>} />
+        <Route
+          path="/React-Modal-Focus-Trap"
+          element={<ReactModalFocusTrap />}
+        />
         <Route path="/PL-Modal-New" element={<PLModalNewPage />} />
       </Routes>
     </BrowserRouter>

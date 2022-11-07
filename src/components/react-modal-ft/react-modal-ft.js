@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import FocusTrap from "focus-trap-react";
 import ReactDOM from "react-dom";
 import "./react-modal.css";
 
 export const ReactModalFT = ({
   isShown,
-  hide,
+  hide = () => {},
   modalContent,
   headerText,
+  onRequestClose,
 }) => {
-  const onKeyDown = (e) => {
+  const backdropRef = useRef();
+
+  const escapeKeyClose = (e) => {
     if (e.keyCode === 27 && isShown) {
+      console.log(e);
       hide();
     }
   };
@@ -19,19 +23,36 @@ export const ReactModalFT = ({
     isShown
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
-    document.addEventListener("keydown", onKeyDown, false);
+    document.addEventListener("keydown", escapeKeyClose, false);
     return () => {
-      document.removeEventListener("keydown", onKeyDown, false);
+      document.removeEventListener("keydown", escapeKeyClose, false);
     };
   }, [isShown]);
 
   const modal = (
     <>
-      <div className="backdrop" onClick={hide} />
-      <FocusTrap>
+      <div
+        className="backdrop"
+        ref={backdropRef}
+        onClick={(ev) => {
+          // If click is directly on container, meaning it's
+          // not on the modal or modal content, you've clicked
+          // outside of the modal and can close it
+          if (ev.target === ev.currentTarget) {
+            onRequestClose(ev);
+          }
+        }}
+      />
+      <FocusTrap
+        focusTrapOptions={{
+          allowOutsideClick: true,
+          clickOutsideDeactivates: true,
+        }}
+      >
         <div
+          id="Dialog"
           className="wrapper"
-          aria-modal
+          aria-modal="true"
           aria-labelledby={headerText}
           tabIndex={-1}
           role="dialog"
