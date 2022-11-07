@@ -1,20 +1,22 @@
 import React from "react";
-import { ReactModalTsNoAf } from "../components/react-modal-ts-no-af/react-modal-ts-noaf";
-import { useModal } from "../components/react-modal-ts-no-af/react-modal-utils";
+import { ReactModalFL } from "../components/react-modal-fl/react-modal-fl";
+import { useModal } from "../components/react-modal-fl/react-modal-utils";
 
 const ReactModalNoAf = () => {
   const { isShown, toggle } = useModal();
   return (
-    <>
-      <div>
-        <h1>React Modal with React, FocusLock, NO AutoFocus</h1>
-      </div>
+    <div>
+      <h1>
+        React Modal using Focus Lock and no <code>AutoFocusInside</code>
+      </h1>
+      <h2>Notes</h2>
       <button onClick={toggle}>Toggle</button>
       <br />
-      <ReactModalTsNoAf
+      <ReactModalFL
+        messages={{ close: "Close" }}
         isShown={isShown}
         hide={toggle}
-        headerText="Confirmation"
+        headerText="Title text"
         modalContent={
           <div style={{ minWidth: 300 }}>
             Hello world{" "}
@@ -28,12 +30,7 @@ const ReactModalNoAf = () => {
       <a href="https://stackblitz.com/edit/reusable-react-modal-ts?file=index.tsx">
         Inspiration Code
       </a>
-      <br />
-      <a href="https://github.com/vanessabau/make-modals/blob/master/src/components/react-modal-ts-no-af/react-modal-ts-noaf.js">
-        Actual Code (Github)
-      </a>
-      <br />
-    </>
+    </div>
   );
 };
 export default ReactModalNoAf;

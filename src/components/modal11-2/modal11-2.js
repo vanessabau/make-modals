@@ -17,12 +17,14 @@ const ModalNew112 = ({
   children,
   visible,
   classes,
+  onClose,
   onRequestClose,
+  openFocusRef,
+  primaryContentSelector,
   cancelProps,
   fullScreenMobile,
   fullScreen,
-  modalTriggerRef,
-  onClose = {},
+  ...otherProps
 }) => {
   const modalRef = useRef();
 
@@ -118,7 +120,7 @@ const ModalNew112 = ({
               className={classes.modalContent}
               id="ElementDetail"
               role="region"
-              aria-labelledby="DiaolgName"
+              aria-labelledby="DialogName"
             >
               Dialog content: {children}
             </div>
@@ -160,13 +162,6 @@ ModalNew112.propTypes = {
   openFocusRef: PropTypes.shape({
     current: PropTypes.object,
   }),
-  /** Element ref for the element that should gain focus when
-   * the modal closes. Defaults to the last focused element
-   * (the button you clicked to open the modal, typically).
-   */
-  closeFocusRef: PropTypes.shape({
-    current: PropTypes.object,
-  }),
   /** A CSS selector to select your primary page content.
    * This content is hidden from screen readers while the
    * modal is open.
@@ -178,9 +173,6 @@ ModalNew112.propTypes = {
   fullScreen: PropTypes.bool,
   /**  Flag to enable fullscreen styles on mobile browsers */
   fullScreenMobile: PropTypes.bool,
-  modalTriggerRef: PropTypes.shape({
-    current: PropTypes.object,
-  }),
 };
 
 ModalNew112.defaultProps = {
@@ -190,12 +182,10 @@ ModalNew112.defaultProps = {
   fullScreen: false,
   primaryContentSelector: "body > *",
   openFocusRef: undefined,
-  closeFocusRef: undefined,
   onClose: undefined,
   onRequestClose: undefined,
   cancelProps: null,
   visible: false,
-  modalTriggerRef: null,
 };
 
 export default ModalNew112;

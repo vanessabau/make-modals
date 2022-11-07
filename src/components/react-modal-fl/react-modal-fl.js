@@ -3,7 +3,13 @@ import FocusLock, { AutoFocusInside } from "react-focus-lock";
 import ReactDOM from "react-dom";
 import "./react-modal.css";
 
-export const ReactModalFL = ({ isShown, hide, modalContent, headerText }) => {
+export const ReactModalFL = ({
+  isShown,
+  hide,
+  modalContent,
+  headerText,
+  messages,
+}) => {
   const onKeyDown = (e) => {
     if (e.keyCode === 27 && isShown) {
       hide();
@@ -35,7 +41,11 @@ export const ReactModalFL = ({ isShown, hide, modalContent, headerText }) => {
           <div className="styledModal">
             <div className="header">
               <div className="headerText">{headerText}</div>
-              <button className="closeButton" onClick={hide}>
+              <button
+                className="closeButton"
+                onClick={hide}
+                aria-label={messages.close}
+              >
                 XX
               </button>
             </div>
