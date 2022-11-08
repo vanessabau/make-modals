@@ -11,8 +11,10 @@ export const ReactModalFT = ({
   headerText,
   initialFocusId,
   messages,
+  modalTitle,
   onRequestClose,
   visible,
+  ...otherProps
 }) => {
   const backdropRef = useRef();
 
@@ -61,9 +63,10 @@ export const ReactModalFT = ({
           id="Dialog"
           className="wrapper"
           aria-modal="true"
-          aria-labelledby={headerText}
+          aria-label={headerText || modalTitle}
           tabIndex={-1}
           role="dialog"
+          {...otherProps}
         >
           <div className="styledModal">
             <div className="header">
@@ -105,6 +108,7 @@ export const ReactModalFT = ({
       /** Label for the close button */
       close: PropTypes.string.isRequired,
     }).isRequired,
+    modalTitle: PropTypes.string.isRequired,
     /** Callback fired when a user attempts to close the modal.
      * Use this to update the `visible` prop. */
     onRequestClose: PropTypes.func,
@@ -116,6 +120,7 @@ export const ReactModalFT = ({
     children: undefined,
     fullScreenMobile: false,
     fullScreen: false,
+    modalTitle: "Hello Title",
     initialFocusId: "Dialog",
     onRequestClose: undefined,
     cancelProps: null,

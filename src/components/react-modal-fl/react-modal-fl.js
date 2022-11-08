@@ -40,6 +40,7 @@ export const ReactModalFL = ({
       <div className="backdrop" onClick={onRequestClose} />
       <FocusLock returnFocus>
         <div
+          id="Dialog"
           className="wrapper"
           aria-modal
           aria-label={headerText || modalTitle}
@@ -97,7 +98,7 @@ export const ReactModalFL = ({
     children: undefined,
     fullScreenMobile: false,
     fullScreen: false,
-    modalTitle: "modal",
+    modalTitle: "Hello Title",
     onRequestClose: undefined,
     cancelProps: null,
     visible: false,

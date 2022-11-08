@@ -99,6 +99,10 @@ const ReactModalFocusLock = () => {
       <a href="https://stackblitz.com/edit/reusable-react-modal-ts?file=index.tsx">
         Inspiration Code
       </a>
+      <br />
+      <a href="https://github.com/vanessabau/make-modals/tree/master/src/components/react-modal-fl">
+        Code on Github
+      </a>
     </div>
   );
 };
