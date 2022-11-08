@@ -27,8 +27,6 @@ const ReactModalFocusTrap = () => {
             setOpen(false);
           }}
           headerText="Welcome Modal"
-          // set "Dialog" as default unless otherwise specified
-          initialFocusId="Dialog"
           children={
             <div style={{ minWidth: 300 }}>
               Hello world{" "}
@@ -56,7 +54,7 @@ const ReactModalFocusTrap = () => {
             setOpen2(false);
           }}
           headerText="Welcome"
-          // set "Dialog" as default unless otherwise specified
+          // "Dialog" set as default gives modal window focus unless this prop is changed
           initialFocusId="focus-me-first"
           children={
             <div style={{ minWidth: 300 }}>
@@ -89,8 +87,6 @@ const ReactModalFocusTrap = () => {
           onRequestClose={() => {
             setOpen3(false);
           }}
-          // set "Dialog" as default unless otherwise specified
-          initialFocusId="Dialog"
           children={
             <div style={{ minWidth: 300 }}>
               Hello world{" "}
