@@ -39,7 +39,7 @@ const ReactModalFocusLock = () => {
       <hr />
       <section id={"section2"}>
         <h2>
-          <code>AutoFocusInside</code> wrapped around the inner button
+          <code>AutoFocusInside</code> focuses inner button
         </h2>
         <button
           onClick={() => {
@@ -96,6 +96,10 @@ const ReactModalFocusLock = () => {
       </section>
       <br />
       <hr />
+      <a href="https://www.npmjs.com/package/react-focus-lock">
+        React Focus Lock
+      </a>
+      <br />
       <a href="https://stackblitz.com/edit/reusable-react-modal-ts?file=index.tsx">
         Inspiration Code
       </a>

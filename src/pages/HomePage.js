@@ -3,7 +3,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <div>
-      <h1>Welcome to my React Modal Sandbox</h1>
+      <h1>Welcome to my React a11y Modal Sandbox</h1>
       <p>
         Navigate to the pages above to see versions of React Modals I've been
         working on

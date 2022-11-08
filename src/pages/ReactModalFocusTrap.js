@@ -97,6 +97,10 @@ const ReactModalFocusTrap = () => {
       </section>
       <br />
       <hr />
+      <a href="https://www.npmjs.com/package/focus-trap-react">
+        Focus Trap React
+      </a>
+      <br />
       <a href="https://stackblitz.com/edit/reusable-react-modal-ts?file=index.tsx">
         Inspiration Code
       </a>
