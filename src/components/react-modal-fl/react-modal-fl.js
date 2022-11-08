@@ -10,15 +10,11 @@ export const ReactModalFL = ({
   children,
   headerText,
   messages,
+  modalTitle,
   onRequestClose,
   visible,
+  ...otherProps
 }) => {
-  const setAriaLabel = () => {
-    if (headerText) {
-      return `setAriaLabel ${headerText}`;
-    }
-    return "alt label for me";
-  };
   const onKeyDown = (e) => {
     if (e.keyCode === 27 && visible) {
       onRequestClose();
@@ -46,10 +42,10 @@ export const ReactModalFL = ({
         <div
           className="wrapper"
           aria-modal
-          aria-label={setAriaLabel}
-          aria-labelledby={`Aria and ${headerText}`}
+          aria-label={headerText || modalTitle}
           tabIndex={-1}
           role="dialog"
+          {...otherProps}
         >
           <div className="styledModal">
             <div className="header">
@@ -89,6 +85,7 @@ export const ReactModalFL = ({
       /** Label for the close button */
       close: PropTypes.string.isRequired,
     }).isRequired,
+    modalTitle: PropTypes.string.isRequired,
     /** Callback fired when a user attempts to close the modal.
      * Use this to update the `visible` prop. */
     onRequestClose: PropTypes.func,
@@ -100,6 +97,7 @@ export const ReactModalFL = ({
     children: undefined,
     fullScreenMobile: false,
     fullScreen: false,
+    modalTitle: "modal",
     onRequestClose: undefined,
     cancelProps: null,
     visible: false,
