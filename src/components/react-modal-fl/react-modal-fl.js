@@ -63,8 +63,6 @@ export const ReactModalFL = ({
               </button>
             </div>
             <div className="content">{children}</div>
-
-            <button>focus me first</button>
           </div>
         </div>
       </FocusLock>
