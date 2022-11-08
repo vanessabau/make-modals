@@ -20,7 +20,6 @@ const ModalNew112 = ({
   onClose,
   onRequestClose,
   openFocusRef,
-  primaryContentSelector,
   cancelProps,
   fullScreenMobile,
   fullScreen,
@@ -30,7 +29,7 @@ const ModalNew112 = ({
 
   const escapeKeyClose = (e) => {
     if (visible && e.keyCode === 27) {
-      onClose();
+      onRequestClose();
     }
   };
 
@@ -76,7 +75,7 @@ const ModalNew112 = ({
         onClick={(ev) => {
           // If click is directly on container, meaning it's
           // not on the modal or modal content, you've clicked
-          // outside of the modal and can close it
+          // outside the modal and can close it
           if (ev.target === ev.currentTarget) {
             onRequestClose(ev);
           }
@@ -162,11 +161,6 @@ ModalNew112.propTypes = {
   openFocusRef: PropTypes.shape({
     current: PropTypes.object,
   }),
-  /** A CSS selector to select your primary page content.
-   * This content is hidden from screen readers while the
-   * modal is open.
-   */
-  primaryContentSelector: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
   cancelProps: PropTypes.object,
   /** Flag to enable fullscreen styles on mobile and desktop browsers */
@@ -180,7 +174,6 @@ ModalNew112.defaultProps = {
   classes: {},
   fullScreenMobile: false,
   fullScreen: false,
-  primaryContentSelector: "body > *",
   openFocusRef: undefined,
   onClose: undefined,
   onRequestClose: undefined,

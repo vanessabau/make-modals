@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactModalFL } from "../components/react-modal-fl/react-modal-fl";
-import { useModal } from "../components/react-modal-fl/react-modal-utils";
 
 const ReactModalNoAf = () => {
-  const { isShown, toggle } = useModal();
+  const [isOpen, setOpen] = useState(false);
   return (
     <div>
       <h1>
         React Modal using Focus Lock and no <code>AutoFocusInside</code>
       </h1>
       <h2>Notes</h2>
-      <button onClick={toggle}>Toggle</button>
+      <button
+        onClick={() => {
+          setOpen(!isOpen);
+        }}
+      >
+        Toggle
+      </button>
       <br />
       <ReactModalFL
         messages={{ close: "Close" }}
-        isShown={isShown}
-        hide={toggle}
-        headerText="Title text"
-        modalContent={
+        visible={isOpen}
+        onRequestClose={() => {
+          setOpen(false);
+        }}
+        //headerText="Title text"
+        children={
           <div style={{ minWidth: 300 }}>
             Hello world{" "}
             <button onClick={() => console.log("clicked!")}>

@@ -17,15 +17,15 @@ const ReactModalFocusTrap = () => {
       </button>
       <br />
       <ReactModalFT
-        isShown={isOpen}
-        hide={() => {
-          setOpen(false);
-        }}
+        visible={isOpen}
+        messages={{ close: "Close" }}
         onRequestClose={() => {
           setOpen(false);
         }}
         headerText="Confirmation"
-        modalContent={
+        // set "Dialog" as default unless otherwise specified
+        initialFocusId="Dialog"
+        children={
           <div style={{ minWidth: 300 }}>
             Hello world{" "}
             <button onClick={() => console.log("clicked!")}>
