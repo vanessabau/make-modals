@@ -1,3 +1,8 @@
-.App{
-  padding: 2rem;
+.App {
+    padding: 2rem;
+}
+
+code {
+    background-color: lightgrey;
+    border-radius: 2px;
 }

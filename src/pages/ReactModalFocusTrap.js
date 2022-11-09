@@ -47,6 +47,12 @@ const ReactModalFocusTrap = () => {
           Focus should go to inner button. Voice over should announce header and
           element: "Welcome, dialog".
         </p>
+        <p>
+          To customize focus, assign an <code>id="my-id-name"</code> to the
+          element to be focused on. Assign{" "}
+          <code>initialFocusId="my-id-name"</code> to the Modal component. ID's
+          must match.
+        </p>
         <button
           onClick={() => {
             setOpen2(!isOpen2);

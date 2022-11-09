@@ -42,12 +42,14 @@ const ReactModalFocusLock = () => {
       <br />
       <hr />
       <section id={"section2"}>
-        <h2>
-          <code>AutoFocusInside</code> focuses inner button
-        </h2>
+        <h2>AutoFocusInside focuses inner button</h2>
         <p>
           Focus should land on inner button. Voice over should announce header
           and element: "Focus button first, dialog".
+        </p>
+        <p>
+          Wrap the element to gain focus on open in
+          <code> AutoFocusInside </code> tags.
         </p>
         <button
           onClick={() => {
