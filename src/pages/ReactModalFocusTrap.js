@@ -12,6 +12,10 @@ const ReactModalFocusTrap = () => {
       </div>
       <section id="section1">
         <h2>Focus defaults to modal window</h2>
+        <p>
+          Focus should land on modal window on open. Voice over should announce
+          header and element: "Welcome modal, dialog".
+        </p>
         <button
           onClick={() => {
             setOpen(!isOpen);
@@ -39,6 +43,10 @@ const ReactModalFocusTrap = () => {
       <hr />
       <section id="section2">
         <h2>Focus goes to the inner button</h2>
+        <p>
+          Focus should go to inner button. Voice over should announce header and
+          element: "Welcome, dialog".
+        </p>
         <button
           onClick={() => {
             setOpen2(!isOpen2);
@@ -73,6 +81,10 @@ const ReactModalFocusTrap = () => {
       <hr />
       <section id="section3">
         <h2>No header text</h2>
+        <p>
+          Focus should got the modal window. With no header voice over should
+          announce aria-label and element: "Hello title, dialog".
+        </p>
         <button
           onClick={() => {
             setOpen3(!isOpen3);

@@ -12,6 +12,10 @@ const ReactModalFocusLock = () => {
       <h1>React Modal using Focus Lock</h1>
       <section id="section1">
         <h2>Focus defaults to modal window</h2>
+        <p>
+          Focus should land on modal window on open. Voice over should announce
+          header and element: "Regular Focus, dialog".
+        </p>
         <button
           onClick={() => {
             setOpen(!isOpen);
@@ -41,6 +45,10 @@ const ReactModalFocusLock = () => {
         <h2>
           <code>AutoFocusInside</code> focuses inner button
         </h2>
+        <p>
+          Focus should land on inner button. Voice over should announce header
+          and element: "Focus button first, dialog".
+        </p>
         <button
           onClick={() => {
             setOpen2(!isOpen2);
@@ -72,6 +80,10 @@ const ReactModalFocusLock = () => {
       <hr />
       <section id="section3">
         <h2>No header text</h2>
+        <p>
+          Focus should land on modal window on open. With no header, voice over
+          should announce aria-label and element: "Hello title, dialog"
+        </p>
         <button
           onClick={() => {
             setOpen3(!isOpen3);
